@@ -9,6 +9,9 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 
+const dns = require("dns");
+dns.setServers(["[8.8.8.8]","[1.1.1.1]"]);
+
 app.use(cors({
   origin: "http://localhost:3000",
   credentials: true,
@@ -19,7 +22,7 @@ app.use("/api", authRoutes);
 app.use("/api/todo", toDoRoutes);
 
 mongoose
-  .connect(process.env.DB_URL)
+  .connect(process.env.MONGODB_URL)
   .then((result) => {
     console.log("db connected successfully!");
   })

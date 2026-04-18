@@ -184,6 +184,8 @@ function ToDoList() {
           </div>
         </div>
 
+        <hr />
+
         {loading ? (
           <div className={styles.noTaskWrapper}>
             <Spin size="large" />
