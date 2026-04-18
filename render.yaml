@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dodoapp
+    runtime: node
+    rootDir: doDoApp
+    buildCommand: npm install && npm --prefix client install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
