@@ -16,7 +16,7 @@ app.use(cors({
   origin:[
     "http://localhost:3000",
     "https://todo-list-4-ww9x.onrender.com",
-  ]
+  ],
   credentials: true,
 }));
 // app.use(cors({ origin: "*" }));
