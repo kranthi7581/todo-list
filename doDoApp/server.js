@@ -14,6 +14,7 @@ dns.setServers(["[8.8.8.8]","[1.1.1.1]"]);
 
 app.use(cors({
   origin: "http://localhost:3000",
+  "https://todolist-tau-two-70.vercel.app",
   credentials: true,
 }));
 app.use(express.json());
