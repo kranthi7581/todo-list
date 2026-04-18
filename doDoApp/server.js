@@ -17,7 +17,7 @@ dns.setServers(["[8.8.8.8]","[1.1.1.1]"]);
 //   "https://todolist-tau-two-70.vercel.app",
 //   credentials: true,
 // }));
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 app.use("/api", authRoutes);
